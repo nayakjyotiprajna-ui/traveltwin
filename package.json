@@ -1,0 +1,19 @@
+{
+  "name": "traveltwin-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TravelTwin — AI-Powered Virtual Travel and Accessibility Platform",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "client:dev": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build",
+    "server:dev": "npm --prefix server run dev",
+    "server:build": "npm --prefix server run build",
+    "server:seed": "npm --prefix server run seed",
+    "install:all": "npm install && npm --prefix client install && npm --prefix server install",
+    "build": "npm run client:build && npm run server:build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
